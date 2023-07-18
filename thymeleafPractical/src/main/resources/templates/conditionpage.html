@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+</head>
+<body>
+    <h2>Checking Active Users (Conditional Statements)</h2>
+    <h4 th:text="${isActive ? 'ACTIVE_USER' : 'INACTIVE_USER'}"></h4>
+
+    <th:block th:switch="${#lists.size(marks)}">
+        <h2 th:case="0">List Contains 0 elements</h2>
+        <h2 th:case="*">List Contains more than 0 elements</h2>
+    </th:block>
+</body>
+</html>
